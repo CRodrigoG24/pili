@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Una sorpresa especial para Pili ✨🎭</title>
+    <meta name="description" content="Una sorpresa teatral súper linda e interactiva hecha especialmente para Pili.">
+    <meta name="theme-color" content="#5c060d">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+    <!-- Resplandor ambiental de fondo -->
+    <div class="ambient-glow"></div>
+
+    <!-- Contenedor principal Mobile-First -->
+    <main class="theater-container" id="theater-app">
+
+        <!-- Cabecera / Bambalina superior de teatro -->
+        <header class="theater-header">
+            <div class="theater-pelmet">
+                <div class="theater-sign">
+                    <span>✨ Función Especial para Pili ✨</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Escenario central -->
+        <section class="stage" aria-label="Escenario del teatro">
+            <div class="spotlight" id="spotlight"></div>
+
+            <!-- Marco de proyección del video -->
+            <div class="video-frame" id="video-frame">
+                <video id="flower-video" playsinline preload="auto">
+                    <source src="public/video.mp4" type="video/mp4">
+                    <source
+                        src="public/%23flores%20amarillas%20en%20v%C3%ADdeo%20para%20verlas%20aunque%20sea%20ya%20que%20no%20te%20regalan%20unas.mp4"
+                        type="video/mp4">
+                    Tu navegador no soporta reproducción de video.
+                </video>
+
+                <!-- Controles flotantes en pantalla para comodidad -->
+                <div class="video-overlay-controls" id="video-controls">
+                    <button class="video-ctrl-btn" id="ctrl-play-pause" title="Pausar / Reanudar"
+                        aria-label="Pausar o reanudar">
+                        <span id="ctrl-play-icon">⏸️</span>
+                    </button>
+                    <div class="video-progress-bar" id="ctrl-progress-bar">
+                        <div class="video-progress-fill" id="ctrl-progress-fill"></div>
+                    </div>
+                    <button class="video-ctrl-btn" id="ctrl-mute" title="Silenciar / Activar sonido"
+                        aria-label="Silenciar o activar sonido">
+                        <span id="ctrl-mute-icon">🔊</span>
+                    </button>
+                    <span class="video-vol-tag" id="vol-indicator">Vol: 50%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Telón de teatro rojo que se abre a los costados -->
+        <div class="curtains-layer" id="curtains-layer" aria-hidden="true">
+            <div class="curtain curtain-left" id="curtain-left">
+                <div class="curtain-tassel"></div>
+            </div>
+            <div class="curtain curtain-right" id="curtain-right">
+                <div class="curtain-tassel"></div>
+            </div>
+        </div>
+
+        <!-- Pantalla Inicial con Botón 3D "Aprétame" -->
+        <div class="intro-overlay" id="intro-overlay">
+            <div class="intro-badge">
+                <span>🎬 Sala Principal · Estreno Exclusivo</span>
+            </div>
+
+            <h1 class="intro-title">ola bobita</h1>
+            <p class="intro-subtitle">Ponete cómoda y apreta el boton para que empiece la magia</p>
+
+            <!-- Botón 3D que simula un pulsador físico real -->
+            <div class="btn-3d-wrapper">
+                <div class="btn-3d-glow"></div>
+                <div class="btn-3d-base">
+                    <button type="button" class="btn-3d" id="btn-apretame" aria-label="Abrir telón y ver la función">
+                        <span class="btn-icon">🎭</span>
+                        <span>¡Aprétame!</span>
+                        <span class="sparkle sparkle-1">✨</span>
+                        <span class="sparkle sparkle-2">💖</span>
+                        <span class="sparkle sparkle-3">⭐</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla Final: "Tqm Pili 💖" con botón repetir -->
+        <div class="ending-overlay" id="ending-overlay" aria-live="polite">
+            <div class="ending-card">
+                <div class="ending-heart-box">
+                    <span class="giant-heart">💖</span>
+                </div>
+
+                <h2 class="ending-title">Tqm Pili 💖</h2>
+                <p class="ending-message">Espero que te haya sacado una sonrisa furrita🌼✨</p>
+
+                <!-- Botón 3D Repetir -->
+                <div class="btn-replay-base">
+                    <button type="button" class="btn-replay" id="btn-replay"
+                        aria-label="Ver el video de nuevo y cerrar telón">
+                        <span class="replay-icon">🔄</span>
+                        <span>Ver de nuevo</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenedor dinámico para lluvia de corazones -->
+        <div class="floating-hearts-container" id="hearts-container"></div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
